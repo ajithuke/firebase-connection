@@ -1,15 +1,22 @@
 import './App.css'
-import {getDatabase} from 'firebase/database'
+import {getDatabase,ref,set} from 'firebase/database'
 import {app} from './firebase.js'
 
 const db = getDatabase(app)
 
 function App() {
+
+  const writeData = ()=>{
+    set(ref(db,"student/1"),{
+      RollNo:4,
+      Name:'Ajit Huke'
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        Firebase App
-      </header>
+      <h1>Firebase App</h1>
+      <button onClick={writeData}> Insert Data </button>
     </div>
   );
 }
