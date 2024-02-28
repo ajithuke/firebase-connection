@@ -14,7 +14,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="container">
       <h1>Firebase App</h1>
       <button onClick={writeData}> Insert Data </button>
     </div>
